@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "minimum_chrome_version": "120",
+  "name": "Study Together",
+  "description": "A little focus. A little peer pressure. Shared website blocking with unanimous friend approval.",
+  "version": "1.0.0",
+  "permissions": ["storage", "declarativeNetRequest", "alarms", "notifications"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "Open Study Together" },
+  "icons": { "128": "icon.png" },
+  "web_accessible_resources": [{ "resources": ["blocked.html"], "matches": ["http://*/*", "https://*/*"] }]
+}
